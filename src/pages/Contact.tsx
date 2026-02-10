@@ -16,7 +16,7 @@ const Contact = () => (
         <p className="text-lg text-muted-foreground mb-8">
           Ready to 10x Your Business? Let's talk.
         </p>
-        <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" className="btn-gradient text-base inline-block">
+        <a href="https://wa.me/70001 86189" target="_blank" rel="noopener noreferrer" className="btn-gradient text-base inline-block">
           Start Your Project Now
         </a>
       </div>

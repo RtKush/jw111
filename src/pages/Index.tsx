@@ -95,8 +95,8 @@ const Index = () => (
             </div>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 text-sm text-muted-foreground">
-            <span className="flex items-center gap-2"><Phone size={14} className="text-primary" /> +91 98765 43210</span>
-            <span className="flex items-center gap-2"><Mail size={14} className="text-primary" /> hello@jeetweb.com</span>
+            <span className="flex items-center gap-2"><Phone size={14} className="text-primary" /> +91 70001 86189</span>
+            <span className="flex items-center gap-2"><Mail size={14} className="text-primary" /> support@jeetweb.com</span>
           </div>
         </div>
       </div>
@@ -120,7 +120,7 @@ const Index = () => (
                 <p className="text-xs text-muted-foreground mt-1">Projects Done</p>
               </div>
               <div className="text-center">
-                <p className="text-3xl font-extrabold text-primary">₹10Cr+</p>
+                <p className="text-3xl font-extrabold text-primary">₹5 lakh+</p>
                 <p className="text-xs text-muted-foreground mt-1">Revenue Generated</p>
               </div>
               <div className="text-center">

@@ -21,7 +21,7 @@ const About = () => (
               Founder of <span className="font-bold text-foreground">JEETWEB</span> — with <span className="text-primary font-semibold">5+ years</span> of experience in full-stack development, AI integration, and digital growth strategies.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-6">
-              <span className="font-bold text-foreground">Aditya Jain</span>, the Co-Founder and Website Developer of Jeetweb, specializes in creating high-performance, modern, and fully optimized websites that help businesses scale faster and build a powerful online presence.
+              <span className="font-bold text-foreground">Brajeet</span>, the Founder & Co-Founder and Website Developer of Jeetweb, specializes in creating high-performance, modern, and fully optimized websites that help businesses scale faster and build a powerful online presence.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-6">
               <span className="font-bold text-foreground">Brajeet Kumar Yadav</span> is a visionary entrepreneur and Founder of Jeetweb, dedicated to building smart digital and AI-driven solutions for businesses.
@@ -35,7 +35,7 @@ const About = () => (
                 <p className="text-xs text-muted-foreground mt-1">Happy Clients</p>
               </div>
               <div className="text-center">
-                <p className="text-3xl font-extrabold text-primary">₹10Cr+</p>
+                <p className="text-3xl font-extrabold text-primary">₹10 lakhs+</p>
                 <p className="text-xs text-muted-foreground mt-1">Revenue Generated</p>
               </div>
               <div className="text-center">
@@ -84,8 +84,8 @@ const About = () => (
             <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center">
               <Sparkles className="text-warning" size={40} />
             </div>
-            <h3 className="text-lg font-bold text-primary mb-2">Zero Coding</h3>
-            <p className="text-sm text-muted-foreground">Copy-paste integration</p>
+            <h3 className="text-lg font-bold text-primary mb-2">Structure Coding</h3>
+            <p className="text-sm text-muted-foreground">Full integration</p>
           </div>
         </div>
       </div>
