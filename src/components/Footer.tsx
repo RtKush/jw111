@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Instagram, Github, Linkedin, Twitter, MessageCircle } from "lucide-react";
+import { Instagram, Linkedin, MessageCircle, Facebook, Youtube } from "lucide-react";
 
 const Footer = () => (
   <footer className="bg-secondary/80 border-t border-border">
@@ -21,17 +21,17 @@ const Footer = () => (
             <p className="text-sm text-primary">Indore, Madhya Pradesh<br />India</p>
           </div>
           <div className="flex items-center gap-4">
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
-              <Instagram size={20} />
-            </a>
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
-              <Github size={20} />
-            </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
+            <a href="https://www.linkedin.com/in/jeetweb-tech-4647b2219" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
               <Linkedin size={20} />
             </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
-              <Twitter size={20} />
+            <a href="https://www.instagram.com/jeetgrowth?igsh=MWl5aHFwaTZxZnY5cA==" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
+              <Instagram size={20} />
+            </a>
+            <a href="https://www.facebook.com/share/17s7UXG5qp/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
+              <Facebook size={20} />
+            </a>
+            <a href="https://youtube.com/@bizmindbyjeet?si=zzMrgGNKAq2tie7Y" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
+              <Youtube size={20} />
             </a>
           </div>
         </div>
@@ -41,10 +41,11 @@ const Footer = () => (
           <h4 className="font-bold text-foreground mb-4">IT Services</h4>
           <ul className="space-y-2 text-sm text-muted-foreground">
             <li>Modern Website Development</li>
-            <li>Branding & Graphic Design</li>
             <li>Premium UI/UX Design</li>
-            <li>Software Development</li>
             <li>Website Maintenance & Security</li>
+            <li>Digital Marketing</li>
+            <li>Social Media Management</li>
+            <li>SEO & Google Ranking</li>
           </ul>
         </div>
 
@@ -73,7 +74,7 @@ const Footer = () => (
         {/* WhatsApp CTA */}
         <div>
           <a
-            href="https://wa.me/7000186189"
+            href="https://wa.me/+919508237650"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-success text-success-foreground px-6 py-3 rounded-full font-semibold text-sm transition-all duration-300 hover:scale-105"

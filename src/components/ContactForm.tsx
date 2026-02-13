@@ -7,7 +7,7 @@ const ContactForm = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const text = `Name: ${form.name}%0AEmail: ${form.email}%0APhone: ${form.phone}%0ACity: ${form.city}%0AMessage: ${form.message}`;
-    window.open(`https://wa.me/7000186189?text=${text}`, "_blank");
+    window.open(`https://wa.me/+919508237650?text=${text}`, "_blank");
   };
 
   return (
