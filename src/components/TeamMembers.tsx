@@ -1,8 +1,10 @@
 import { useState } from "react";
-import { Instagram, Linkedin, MessageCircle, Facebook, Youtube } from "lucide-react";
+import { Instagram, Linkedin, MessageCircle } from "lucide-react";
 
 interface Member {
   name: string;
+  title: string;
+  subtitle: string;
   image: string;
   about: string;
   instagram?: string;
@@ -14,30 +16,24 @@ interface Member {
 
 const teamMembers: Member[] = [
   {
-    name: "Brajeet Kumar",
-    image: "/images/team1.jpg",
+    name: "Rt Kush",
+    title: "Team Lead",
+    subtitle: "Full-Stack Developer & Software Engineer, NIT Raipur",
+    image: "/src/assets/passport.jpg",
     about:
-      "Full Stack Developer & Founder of JeetWeb.\nPassionate about AI-driven digital solutions.",
-    instagram: "#",
-    linkedin: "#",
-    facebook: "#",
-    youtube: "#",
-  },
-  {
-    name: "Rahul Sharma",
-    image: "/images/team2.jpg",
-    about:
-      "UI/UX Designer focused on modern & high-converting designs.\nExpert in branding & visuals.",
+      "Leading modern web development with scalable architecture, performance optimization, and AI-driven solutions.",
     instagram: "#",
     linkedin: "#",
   },
   {
-    name: "Anjali Verma",
-    image: "/images/team3.jpg",
+    name: "Ashvini",
+    title: "Frontend Dev",
+    subtitle: "UI/UX Designer & Frontend Specialist",
+    image: "/src/assets/ash.png",
     about:
-      "Digital Marketing Specialist.\nHelping brands grow with smart strategies.",
-    facebook: "#",
-    whatsapp: "#",
+      "Crafting high-performance, intuitive interfaces that seamlessly blend speed, design, and exceptional user experience.",
+    instagram: "#",
+    linkedin: "#",
   },
 ];
 
@@ -45,7 +41,7 @@ export default function TeamMembers() {
   const [selected, setSelected] = useState<Member | null>(null);
 
   return (
-    <section className=" bg-gradient-to-b from-background to-muted/30">
+    <section className="bg-gradient-to-b from-background to-muted/30">
       <div className="section-container text-center">
 
         {/* Horizontal Cards */}
@@ -64,7 +60,10 @@ export default function TeamMembers() {
                 alt={member.name}
                 className="w-16 h-16 rounded-full object-cover ring-2 ring-primary/20"
               />
-              <h3 className="text-lg font-semibold">{member.name}</h3>
+              <div className="text-left">
+                <h3 className="text-lg font-semibold">{member.name}</h3>
+                <p className="text-sm text-gray-500">{member.title}</p>
+              </div>
             </div>
           ))}
         </div>
@@ -72,7 +71,7 @@ export default function TeamMembers() {
         {/* Modal */}
         {selected && (
           <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
-            <div className="bg-white w-[90%] max-w-md rounded-3xl p-8 text-center shadow-2xl animate-[zoomIn_.3s_ease] relative">
+            <div className="bg-white w-[90%] max-w-md rounded-3xl p-8 text-center shadow-2xl relative">
 
               {/* Close */}
               <button
@@ -88,9 +87,9 @@ export default function TeamMembers() {
                 className="w-28 h-28 mx-auto rounded-full object-cover mb-4 shadow-md"
               />
 
-              <h3 className="text-2xl font-bold mb-3">
-                {selected.name}
-              </h3>
+              <h3 className="text-2xl font-bold">{selected.name}</h3>
+              <p className="text-primary font-medium">{selected.title}</p>
+              <p className="text-sm text-gray-500 mb-3">{selected.subtitle}</p>
 
               <p className="text-gray-600 whitespace-pre-line mb-6 leading-relaxed">
                 {selected.about}
@@ -117,28 +116,6 @@ export default function TeamMembers() {
                     className="p-3 rounded-full bg-blue-100 hover:bg-blue-200 transition"
                   >
                     <Linkedin className="w-5 h-5 text-blue-600" />
-                  </a>
-                )}
-
-                {selected.facebook && (
-                  <a
-                    href={selected.facebook}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="p-3 rounded-full bg-blue-100 hover:bg-blue-200 transition"
-                  >
-                    <Facebook className="w-5 h-5 text-blue-700" />
-                  </a>
-                )}
-
-                {selected.youtube && (
-                  <a
-                    href={selected.youtube}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="p-3 rounded-full bg-red-100 hover:bg-red-200 transition"
-                  >
-                    <Youtube className="w-5 h-5 text-red-600" />
                   </a>
                 )}
 
