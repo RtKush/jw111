@@ -162,26 +162,6 @@ const Index = () => (
       </div>
     </section>
 
-    {/* Why Choose JeetWeb */}
-    <section className="py-20 bg-secondary/50">
-      <div className="section-container">
-        <SectionHeading
-          title="Why Choose JeetWeb"
-          subtitle="We combine expertise, speed, and reliability to deliver excellence."
-        />
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {features.map((f) => (
-            <FeatureCard
-              key={f.title}
-              icon={f.icon}
-              title={f.title}
-              description={f.desc}
-            />
-          ))}
-        </div>
-      </div>
-    </section>
-
     {/* About Preview */}
     <section className="py-20 bg-secondary/50">
       <div className="section-container">
@@ -230,6 +210,26 @@ const Index = () => (
       </div>
     </section>
 
+    {/* Why Choose JeetWeb */}
+    <section className="py-20 bg-secondary/50">
+      <div className="section-container">
+        <SectionHeading
+          title="Why Choose JeetWeb"
+          subtitle="We combine expertise, speed, and reliability to deliver excellence."
+        />
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {features.map((f) => (
+            <FeatureCard
+              key={f.title}
+              icon={f.icon}
+              title={f.title}
+              description={f.desc}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+
     {/* Client Success Stories */}
     <section className="py-20">
       <div className="section-container">
@@ -264,7 +264,7 @@ const Index = () => (
           </div>
           <div className="flex flex-col sm:flex-row gap-4 text-sm text-muted-foreground">
             <span className="flex items-center gap-2">
-              <Phone size={14} className="text-primary" /> +91 70001 86189
+              <Phone size={14} className="text-primary" /> +91 95082 37650
             </span>
             <span className="flex items-center gap-2">
               <Mail size={14} className="text-primary" /> support@jeetweb.com

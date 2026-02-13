@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Github, Twitter, Linkedin } from "lucide-react";
+import { Menu, X, Github, Twitter, Linkedin, Instagram, Facebook, Youtube } from "lucide-react";
 
 const navLinks = [
   { label: "Home", to: "/" },
@@ -44,14 +44,17 @@ const Navbar = () => {
 
         {/* Social icons desktop */}
         <div className="hidden lg:flex items-center gap-4 border-l border-border pl-6">
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
-            <Github size={18} />
-          </a>
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
-            <Twitter size={18} />
-          </a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
+          <a href="https://www.linkedin.com/in/jeetweb-tech-4647b2219" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
             <Linkedin size={18} />
+          </a>
+          <a href="https://www.instagram.com/jeetgrowth?igsh=MWl5aHFwaTZxZnY5cA==" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
+            <Instagram size={18} />
+          </a>
+          <a href="https://www.facebook.com/share/17s7UXG5qp/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
+            <Facebook size={18} />
+          </a>
+          <a href="https://youtube.com/@bizmindbyjeet?si=zzMrgGNKAq2tie7Y" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
+            <Youtube size={18} />
           </a>
         </div>
 
