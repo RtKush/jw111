@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import logo from "../assets/logo.jpeg";
 import { Instagram, Linkedin, MessageCircle, Facebook, Youtube } from "lucide-react";
 
 const Footer = () => (
@@ -8,9 +9,14 @@ const Footer = () => (
         {/* Brand */}
         <div className="lg:col-span-1">
           <div className="flex items-center gap-2 mb-4">
-            <div className="w-10 h-10 rounded-full gradient-bg flex items-center justify-center text-primary-foreground font-bold text-sm">
-              JW
-            </div>
+            <div className="w-10 h-10 rounded-full flex items-center justify-center overflow-hidden">
+          <img 
+           src={logo} 
+           alt="JeetWeb Logo" 
+            className="w-full h-full object-cover"
+           />
+          </div>
+
             <span className="text-xl font-extrabold text-foreground">JEETWEB</span>
           </div>
           <p className="text-sm text-muted-foreground leading-relaxed mb-4">

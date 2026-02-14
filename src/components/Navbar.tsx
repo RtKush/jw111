@@ -1,4 +1,5 @@
 import { useState } from "react";
+import logo from "../assets/logo.jpeg";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Github, Twitter, Linkedin, Instagram, Facebook, Youtube } from "lucide-react";
 
@@ -18,9 +19,13 @@ const Navbar = () => {
     <nav className="sticky top-0 z-50 bg-card/95 backdrop-blur-lg border-b border-border">
       <div className="section-container flex items-center justify-between h-16">
         <Link to="/" className="flex items-center gap-2">
-          <div className="w-9 h-9 rounded-full gradient-bg flex items-center justify-center text-primary-foreground font-bold text-sm">
-            W
-          </div>
+          <div className="w-10 h-10 rounded-full flex items-center justify-center overflow-hidden">
+          <img 
+           src={logo} 
+          alt="JeetWeb Logo" 
+        className="w-full h-full object-cover"
+           />
+        </div>
           <span className="text-xl font-extrabold text-foreground">JEETWEB</span>
         </Link>
 
