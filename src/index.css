@@ -148,3 +148,19 @@
     @apply px-8 py-3 rounded-full bg-foreground text-background font-semibold transition-all duration-300 hover:scale-105;
   }
 }
+
+
+.animate-scroll {
+  display: flex;
+  width: max-content;
+  animation: scrollSmooth 40s linear infinite;
+}
+
+@keyframes scrollSmooth {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-50% - 12px));
+  }
+}
