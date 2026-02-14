@@ -164,3 +164,8 @@
     transform: translateX(calc(-50% - 12px));
   }
 }
+/* 
+@keyframes smoothBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.85; }
+} */
