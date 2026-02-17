@@ -1,5 +1,9 @@
 import { useState } from "react";
 import { Mail } from "lucide-react";
+<<<<<<< akk
+=======
+import emailjs from "@emailjs/browser";
+>>>>>>> main
 
 const ContactForm = () => {
   const [form, setForm] = useState({
@@ -9,6 +13,7 @@ const ContactForm = () => {
     city: "",
     message: "",
   });
+<<<<<<< akk
 
   const [errors, setErrors] = useState<{
     name?: string;
@@ -54,8 +59,52 @@ const ContactForm = () => {
 
     return newErrors;
   };
+=======
+>>>>>>> main
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [errors, setErrors] = useState<{
+    name?: string;
+    email?: string;
+    phone?: string;
+    city?: string;
+    message?: string;
+  }>({});
+
+  const [sending, setSending] = useState(false);
+
+  // ✅ Validation
+  const validate = () => {
+    const newErrors: typeof errors = {};
+
+    if (!form.name.trim()) newErrors.name = "Name is required";
+
+    if (!form.email.trim()) {
+      newErrors.email = "Email is required";
+    } else if (
+      !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(form.email)
+    ) {
+      newErrors.email = "Enter a valid email address";
+    }
+
+    if (!form.phone.trim()) {
+      newErrors.phone = "Phone number is required";
+    } else if (!/^[6-9]\d{9}$/.test(form.phone)) {
+      newErrors.phone = "Enter valid 10-digit mobile number";
+    }
+
+    if (!form.city.trim()) newErrors.city = "City is required";
+
+    if (!form.message.trim()) {
+      newErrors.message = "Message is required";
+    } else if (form.message.length < 10) {
+      newErrors.message = "Message must be at least 10 characters";
+    }
+
+    return newErrors;
+  };
+
+  // ✅ Submit
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     const validationErrors = validate();
@@ -63,6 +112,7 @@ const ContactForm = () => {
 
     if (Object.keys(validationErrors).length > 0) return;
 
+<<<<<<< akk
     const subject = encodeURIComponent("New Website Inquiry - Jeetweb");
 
     const body = encodeURIComponent(`
@@ -76,6 +126,39 @@ ${form.message}
     `);
 
     window.location.href = `mailto:support@jeetweb.tech?subject=${subject}&body=${body}`;
+=======
+    setSending(true);
+
+    try {
+      await emailjs.send(
+        "service_darzdrm",      // service ID
+        "template_ncqxytu",     // template ID
+        {
+          name: form.name,
+          email: form.email,
+          phone: form.phone,
+          city: form.city,
+          message: form.message,
+        },
+        "2NCc-dlaMgQNTeGQp"      // public key
+      );
+
+      alert("Message sent. Kindly wait till our team will reach to you.");
+
+      setForm({
+        name: "",
+        email: "",
+        phone: "",
+        city: "",
+        message: "",
+      });
+
+    } catch (error) {
+      alert("Something went wrong. Please try again.");
+    }
+
+    setSending(false);
+>>>>>>> main
   };
 
   return (
@@ -83,7 +166,10 @@ ${form.message}
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
 
+<<<<<<< akk
         {/* Name */}
+=======
+>>>>>>> main
         <div>
           <input
             type="text"
@@ -97,7 +183,10 @@ ${form.message}
           )}
         </div>
 
+<<<<<<< akk
         {/* Email */}
+=======
+>>>>>>> main
         <div>
           <input
             type="email"
@@ -111,7 +200,10 @@ ${form.message}
           )}
         </div>
 
+<<<<<<< akk
         {/* Phone */}
+=======
+>>>>>>> main
         <div>
           <input
             type="tel"
@@ -130,7 +222,10 @@ ${form.message}
           )}
         </div>
 
+<<<<<<< akk
         {/* City */}
+=======
+>>>>>>> main
         <div>
           <input
             type="text"
@@ -146,7 +241,10 @@ ${form.message}
 
       </div>
 
+<<<<<<< akk
       {/* Message */}
+=======
+>>>>>>> main
       <div>
         <textarea
           placeholder="Tell us about your project..."
@@ -160,6 +258,7 @@ ${form.message}
         )}
       </div>
 
+<<<<<<< akk
       {/* Submit Button */}
       <button
         type="submit"
@@ -172,6 +271,17 @@ ${form.message}
       <p className="text-xs text-destructive-foreground">
         Opens your email app · Click send to complete
       </p>
+=======
+      <button
+        type="submit"
+        disabled={sending}
+        className="w-full sm:w-auto px-8 py-3 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold flex items-center justify-center gap-2 transition-all duration-300 hover:scale-105"
+      >
+        <Mail size={16} />
+        {sending ? "Sending..." : "Send Message"}
+      </button>
+
+>>>>>>> main
     </form>
   );
 };

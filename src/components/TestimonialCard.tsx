@@ -3,11 +3,11 @@ import { Star } from "lucide-react";
 interface TestimonialCardProps {
   quote: string;
   name: string;
-  designation: string;
+  location: string;
   avatar: string;
 }
 
-const TestimonialCard = ({ quote, name, designation, avatar }: TestimonialCardProps) => (
+const TestimonialCard = ({ quote, name, location, avatar }: TestimonialCardProps) => (
   <div className="bg-card rounded-2xl p-6 shadow-lg border border-border card-hover">
     <div className="flex gap-1 mb-4">
       {[...Array(5)].map((_, i) => (
@@ -21,7 +21,7 @@ const TestimonialCard = ({ quote, name, designation, avatar }: TestimonialCardPr
       </div>
       <div>
         <p className="font-semibold text-sm text-foreground">{name}</p>
-        <p className="text-xs text-muted-foreground">{designation}</p>
+        <p className="text-xs text-muted-foreground">{location}</p>
       </div>
     </div>
   </div>

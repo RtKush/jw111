@@ -10,6 +10,7 @@ import aboutTeam from "@/assets/about-team.jpg";
 import degitalmarking from "@/assets/digital-marketing.jpg";
 import socialmedia from "@/assets/social-media-management.png";
 import seoranking from "@/assets/seo-google-ranking.jpg";
+import robot from "../assets/robot.jpeg";
 import {
   Globe,
   Bot,
@@ -93,27 +94,50 @@ const features = [
 ];
 
 const testimonials = [
-  {
-    quote:
-      "JeetWeb transformed our online presence completely. Revenue grew 3x within 6 months!",
-    name: "Rahul Sharma",
-    designation: "CEO, TechStart India",
-    avatar: "RS",
-  },
-  {
-    quote:
-      "The AI chatbot they built reduced our support tickets by 60%. Incredible team!",
-    name: "Priya Patel",
-    designation: "CTO, FinServe",
-    avatar: "PP",
-  },
-  {
-    quote:
-      "Best agency we've worked with. Professional, fast, and the results speak for themselves.",
-    name: "Amit Verma",
-    designation: "Founder, GrowthBox",
-    avatar: "AV",
-  },
+{
+  quote:
+    "Focused implementation improved client retention rates, strengthened communication clarity, and increased profitability.",
+  name: "Rahul Sharma",
+  location: "Vijay Nagar,MP",
+  avatar: "RS",
+},
+{
+  quote:
+    "Their technical expertise boosted engagement levels, optimized performance metrics, and improved market positioning.",
+  name: "Aditya Mishra",
+  location: "Palasia, Indore",
+  avatar: "AM",
+},
+{
+  quote:
+    "Creative strategy enhanced visibility online, strengthened outreach campaigns, and increased valuable inquiries.",
+  name: "Amit Verma",
+  location: "Rajendra Nagar,MP",
+  avatar: "AV",
+},
+{
+  quote:
+    "Professional execution accelerated revenue channels, simplified workflows internally, and reinforced brand credibility.",
+  name: "Rohit Singh",
+  location: "Sudama Nagar,MP",
+  avatar: "RS",
+},
+{
+  quote:
+    "Innovative solutions expanded audience reach, refined communication efforts, and supported consistent expansion.",
+  name: "Saurabh Kumar",
+  location: "Rau, Indore",
+  avatar: "SK",
+},
+{
+  quote:
+    "Strategic planning elevated conversion rates, strengthened partnerships externally, and improved operational efficiency.",
+  name: "Aman Yadav",
+  location: "Mhow, Indore",
+  avatar: "AY",
+},
+
+
 ];
 
 const Index = () => (
@@ -237,41 +261,87 @@ const Index = () => (
           title="Client Success Stories"
           subtitle="Don't just take our word for it — hear from our clients."
         />
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-          {testimonials.map((t) => (
-            <TestimonialCard key={t.name} {...t} />
-          ))}
-        </div>
-        <div className="bg-card rounded-3xl shadow-lg border border-border p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8">
-          <div className="flex items-center gap-6">
-            <div>
-              <p className="text-5xl font-extrabold text-foreground">
-                4.9<span className="text-2xl text-muted-foreground">/5.0</span>
-              </p>
-              <div className="flex gap-1 mt-2">
-                {[...Array(5)].map((_, i) => (
-                  <Star
-                    key={i}
-                    size={20}
-                    className="fill-primary text-primary"
-                  />
-                ))}
-              </div>
-              <p className="text-sm text-muted-foreground mt-1">
-                Based on 120+ reviews
-              </p>
-            </div>
-          </div>
-          <div className="flex flex-col sm:flex-row gap-4 text-sm text-muted-foreground">
-            <span className="flex items-center gap-2">
-              <Phone size={14} className="text-primary" /> +91 95082 37650
-            </span>
-            <span className="flex items-center gap-2">
-              <Mail size={14} className="text-primary" /> support@jeetweb.com
-            </span>
-          </div>
-        </div>
+       <div className="relative overflow-hidden mb-12">
+
+  {/* Fade effect left */}
+  <div className="pointer-events-none absolute left-0 top-0 h-full w-16 bg-gradient-to-r from-background to-transparent z-10" />
+
+  {/* Fade effect right */}
+  <div className="pointer-events-none absolute right-0 top-0 h-full w-16 bg-gradient-to-l from-background to-transparent z-10" />
+
+<div className="relative overflow-hidden mb-12">
+  <div className="flex gap-6 animate-scroll">
+    {[...testimonials, ...testimonials].map((t, i) => (
+      <div key={i} className="w-[220px] flex-shrink-0">
+        <TestimonialCard {...t} />
       </div>
+    ))}
+  </div>
+</div>
+
+
+
+</div>
+
+        <div className="bg-card rounded-3xl shadow-lg border border-border p-21 md:p-15 flex flex-col md:flex-row items-center justify-between gap-8">
+  
+  <div className="w-full md:w-[45%] flex justify-center md:justify-start md:pl-6">
+    <img
+      src={robot} 
+      alt="Client Success"
+      className="w-40 md:w-40 rounded-2x1 shadow-md object-cover"
+    />
+  </div>
+
+  <div className="hidden md:flex flex-col items-center text-center px-8">
+  <TrendingUp size={32} className="text-primary mb-3" />
+
+  <p className="text-lg font-semibold text-foreground">
+    Growth-Driven Results
+  </p>
+
+  <p className="text-sm text-muted-foreground mt-2 max-w-xs">
+    We focus on performance, ROI, and long-term brand authority.
+  </p>
+</div>
+
+
+
+  <div className="w-full md:w-[55%] flex flex-col gap-6 md:items-end text-center md:text-right md:pr-6">
+
+    <div className="text-left md:text-right">
+      <p className="text-5xl font-extrabold text-foreground">
+        4.9<span className="text-2xl text-muted-foreground">/5.0</span>
+      </p>
+
+      <div className="flex md:justify-end gap-1 mt-2">
+        {[...Array(5)].map((_, i) => (
+          <Star
+            key={i}
+            size={20}
+            className="fill-primary text-primary"
+          />
+        ))}
+      </div>
+
+      <p className="text-sm text-muted-foreground mt-1">
+        Based on 120+ reviews
+      </p>
+    </div>
+
+    <div className="flex flex-col sm:flex-row gap-4 text-sm text-muted-foreground">
+      <span className="flex items-center gap-2">
+        <Phone size={14} className="text-primary" /> +91 95082 37650
+      </span>
+
+      <span className="flex items-center gap-2">
+        <Mail size={14} className="text-primary" /> support@jeetweb.tech
+      </span>
+    </div>
+        </div>
+  </div>
+</div>
+
     </section>
 
     {/* Final CTA */}

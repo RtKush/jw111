@@ -11,6 +11,7 @@ import {
   GraduationCap,
   Store,
   Newspaper,
+  Crown,
   Check,
 } from "lucide-react";
 
@@ -207,113 +208,326 @@ const Services = () => (
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {/* Basic */}
-          <div className="rounded-2xl overflow-hidden bg-gradient-to-b from-primary to-primary/80 text-primary-foreground p-6 flex flex-col">
-            <span className="text-xs bg-primary-foreground/20 px-3 py-1 rounded-full self-start mb-4">
-              SPECIAL OFFER
-            </span>
+        <div className="relative rounded-2xl overflow-hidden bg-gradient-to-b from-primary to-primary/80 text-primary-foreground p-6 flex flex-col transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl">
+
+        <div className="absolute top-4 right-4 bg-red-500 text-black text-xs font-semibold px-3 py-1 rounded-full shadow-md animate-pulse">
+          SPECIAL OFFER
+          </div>
+
+
             <h3 className="text-xl font-bold mb-1">BASIC</h3>
-            <p className="text-sm opacity-80 mb-4">Single Page Websites</p>
-            <ul className="space-y-2 text-xs opacity-90 flex-1 mb-6">
-              <li>• Starter One-Small Business / Personal</li>
-              <li>• Starter Offer: 1 Year Free Domain & Hosting</li>
-              <li>• 1 Template</li>
-              <li>• Contact Form + Social Media Integration</li>
-              <li>• Full Responsive Design</li>
-              <li>• SSL Certificate Included</li>
-            </ul>
+            <p className="text-sm opacity-80 mb-4">( Single Page Websites )</p>
+         <ul className="space-y-3 text-sm flex-1 mb-6">
+  <li className="flex items-start gap-3">
+    <div className="bg-green-500/20 p-1.5 rounded-full shadow-sm">
+      <Check size={16} className="text-green-400 drop-shadow-sm" />
+    </div>
+    <span>Starter One-Small Business / Personal</span>
+  </li>
+
+  <li className="flex items-start gap-3">
+    <div className="bg-green-500/20 p-1.5 rounded-full shadow-sm">
+      <Check size={16} className="text-green-400 drop-shadow-sm" />
+    </div>
+    <span>Starter Offer: 1 Year Free Domain & Hosting</span>
+  </li>
+
+  <li className="flex items-start gap-3">
+    <div className="bg-green-500/20 p-1.5 rounded-full shadow-sm">
+      <Check size={16} className="text-green-400 drop-shadow-sm" />
+    </div>
+    <span>1 Template</span>
+  </li>
+
+  <li className="flex items-start gap-3">
+    <div className="bg-green-500/20 p-1.5 rounded-full shadow-sm">
+      <Check size={16} className="text-green-400 drop-shadow-sm" />
+    </div>
+    <span>Contact Form + Social Media Integration</span>
+  </li>
+
+  <li className="flex items-start gap-3">
+    <div className="bg-green-500/20 p-1.5 rounded-full shadow-sm">
+      <Check size={16} className="text-green-400 drop-shadow-sm" />
+    </div>
+    <span>Full Responsive Design</span>
+  </li>
+
+  <li className="flex items-start gap-3">
+    <div className="bg-green-500/20 p-1.5 rounded-full shadow-sm">
+      <Check size={16} className="text-green-400 drop-shadow-sm" />
+    </div>
+    <span>SSL Certificate Included</span>
+  </li>
+</ul>
+
             <div className="mb-4">
               <span className="text-sm line-through opacity-60">₹12,000</span>
               <p className="text-3xl font-extrabold">₹5,999</p>
             </div>
             <Link
               to="/contact"
-              className="bg-primary-foreground text-foreground px-6 py-2 rounded-full text-sm font-semibold text-center hover:scale-105 transition-transform"
+              className="bg-amber-500 text-foreground px-6 py-2 rounded-full text-sm font-semibold text-center hover:scale-105 transition-transform"
             >
               Get Started
             </Link>
           </div>
 
           {/* Standard */}
-          <div className="rounded-2xl overflow-hidden bg-gradient-to-b from-primary to-primary/80 text-primary-foreground p-6 flex flex-col">
-            <span className="text-xs bg-primary-foreground/20 px-3 py-1 rounded-full self-start mb-4">
-              BEST SELLING
-            </span>
+        <div className="relative rounded-2xl overflow-hidden bg-gradient-to-b from-primary to-primary/80 text-primary-foreground p-6 flex flex-col transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl">
+
+        <div className="absolute top-4 right-4 bg-red-500 text-black text-xs font-semibold px-3 py-1 rounded-full shadow-md animate-pulse">
+          BEST SELLING
+          </div>
             <h3 className="text-xl font-bold mb-1">STANDARD</h3>
-            <p className="text-sm opacity-80 mb-4">Multi Page Best Selling</p>
-            <ul className="space-y-2 text-xs opacity-90 flex-1 mb-6">
-              <li>• Starter Offer: 1 Year Free Domain & Hosting</li>
-              <li>• Basic E-commerce Setup (up to 10 products)</li>
-              <li>• Full Custom Coding</li>
-              <li>• Full Responsive Design</li>
-              <li>• Pages: 10-15 Customizable Pages</li>
-              <li>• Blog / News Section</li>
-            </ul>
+            <p className="text-sm opacity-80 mb-4">( Multi Page Best Selling )</p>
+            <ul className="space-y-3 text-xs flex-1 mb-6">
+  <li className="flex items-start gap-3">
+    <div className="bg-green-500/20 p-1.5 rounded-full shadow-sm">
+      <Check
+        size={14}
+        className="text-green-400 drop-shadow-[0_0_6px_rgba(34,197,94,0.8)]"
+      />
+    </div>
+    <span>Starter Offer: 1 Year Free Domain & Hosting</span>
+  </li>
+
+  <li className="flex items-start gap-3">
+    <div className="bg-green-500/20 p-1.5 rounded-full shadow-sm">
+      <Check
+        size={14}
+        className="text-green-400 drop-shadow-[0_0_6px_rgba(34,197,94,0.8)]"
+      />
+    </div>
+    <span>Basic E-commerce Setup (up to 10 products)</span>
+  </li>
+
+  <li className="flex items-start gap-3">
+    <div className="bg-green-500/20 p-1.5 rounded-full shadow-sm">
+      <Check
+        size={14}
+        className="text-green-400 drop-shadow-[0_0_6px_rgba(34,197,94,0.8)]"
+      />
+    </div>
+    <span>Full Custom Coding</span>
+  </li>
+
+  <li className="flex items-start gap-3">
+    <div className="bg-green-500/20 p-1.5 rounded-full shadow-sm">
+      <Check
+        size={14}
+        className="text-green-400 drop-shadow-[0_0_6px_rgba(34,197,94,0.8)]"
+      />
+    </div>
+    <span>Full Responsive Design</span>
+  </li>
+
+  <li className="flex items-start gap-3">
+    <div className="bg-green-500/20 p-1.5 rounded-full shadow-sm">
+      <Check
+        size={14}
+        className="text-green-400 drop-shadow-[0_0_6px_rgba(34,197,94,0.8)]"
+      />
+    </div>
+    <span>Pages: 10–15 Customizable Pages</span>
+  </li>
+
+  <li className="flex items-start gap-3">
+    <div className="bg-green-500/20 p-1.5 rounded-full shadow-sm">
+      <Check
+        size={14}
+        className="text-green-400 drop-shadow-[0_0_6px_rgba(34,197,94,0.8)]"
+      />
+    </div>
+    <span>Blog / News Section</span>
+  </li>
+</ul>
+
             <div className="mb-4">
               <span className="text-sm line-through opacity-60">₹18,000</span>
               <p className="text-3xl font-extrabold">₹9,999</p>
             </div>
             <Link
               to="/contact"
-              className="bg-primary-foreground text-foreground px-6 py-2 rounded-full text-sm font-semibold text-center hover:scale-105 transition-transform"
+              className="bg-amber-500 text-foreground px-6 py-2 rounded-full text-sm font-semibold text-center hover:scale-105 transition-transform"
             >
               Get Started
             </Link>
           </div>
 
           {/* Advance */}
-          <div className="rounded-2xl overflow-hidden bg-gradient-to-b from-[hsl(271,81%,56%)] to-[hsl(271,81%,40%)] text-primary-foreground p-6 flex flex-col">
-            <span className="text-xs bg-primary-foreground/20 px-3 py-1 rounded-full self-start mb-4">
-              SPECIAL OFFER
-            </span>
+                 <div className="relative rounded-2xl overflow-hidden bg-gradient-to-b from-primary to-primary/80 text-primary-foreground p-6 flex flex-col transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl">
+
+        <div className="absolute top-4 right-4 bg-red-500 text-black text-xs font-semibold px-3 py-1 rounded-full shadow-md animate-pulse">
+          SPECIAL OFFER
+          </div>
             <h3 className="text-xl font-bold mb-1">ADVANCE</h3>
             <p className="text-sm opacity-80 mb-4">
-              Fully Functional (Dynamic)
+              ( Fully Functional (Dynamic) )
             </p>
-            <ul className="space-y-2 text-xs opacity-90 flex-1 mb-6">
-              <li>• Starter Offer: 1 Year Free Domain & Premium Hosting</li>
-              <li>• Starter Yearly – Free Maintenance (1 Year)</li>
-              <li>• Admin Panel + User Login System</li>
-              <li>• Payment Gateway Integration</li>
-              <li>• Full Custom Coding (Fully Responsive)</li>
-              <li>• Advanced SEO & Performance Optimization</li>
-            </ul>
+        <ul className="space-y-3 text-xs flex-1 mb-6">
+  <li className="flex items-start gap-3">
+    <div className="bg-green-500/20 p-1.5 rounded-full shadow-sm">
+      <Check
+        size={14}
+        className="text-green-400 drop-shadow-[0_0_6px_rgba(34,197,94,0.8)]"
+      />
+    </div>
+    <span>Starter Offer: 1 Year Free Domain & Premium Hosting</span>
+  </li>
+
+  <li className="flex items-start gap-3">
+    <div className="bg-green-500/20 p-1.5 rounded-full shadow-sm">
+      <Check
+        size={14}
+        className="text-green-400 drop-shadow-[0_0_6px_rgba(34,197,94,0.8)]"
+      />
+    </div>
+    <span>Starter Yearly – Free Maintenance (1 Year)</span>
+  </li>
+
+  <li className="flex items-start gap-3">
+    <div className="bg-green-500/20 p-1.5 rounded-full shadow-sm">
+      <Check
+        size={14}
+        className="text-green-400 drop-shadow-[0_0_6px_rgba(34,197,94,0.8)]"
+      />
+    </div>
+    <span>Admin Panel + User Login System</span>
+  </li>
+
+  <li className="flex items-start gap-3">
+    <div className="bg-green-500/20 p-1.5 rounded-full shadow-sm">
+      <Check
+        size={14}
+        className="text-green-400 drop-shadow-[0_0_6px_rgba(34,197,94,0.8)]"
+      />
+    </div>
+    <span>Payment Gateway Integration</span>
+  </li>
+
+  <li className="flex items-start gap-3">
+    <div className="bg-green-500/20 p-1.5 rounded-full shadow-sm">
+      <Check
+        size={14}
+        className="text-green-400 drop-shadow-[0_0_6px_rgba(34,197,94,0.8)]"
+      />
+    </div>
+    <span>Full Custom Coding (Fully Responsive)</span>
+  </li>
+
+  <li className="flex items-start gap-3">
+    <div className="bg-green-500/20 p-1.5 rounded-full shadow-sm">
+      <Check
+        size={14}
+        className="text-green-400 drop-shadow-[0_0_6px_rgba(34,197,94,0.8)]"
+      />
+    </div>
+    <span>Advanced SEO & Performance Optimization</span>
+  </li>
+</ul>
+
             <div className="mb-4">
               <span className="text-sm line-through opacity-60">₹40,000</span>
               <p className="text-3xl font-extrabold">₹14,999</p>
             </div>
             <Link
               to="/contact"
-              className="bg-primary-foreground text-foreground px-6 py-2 rounded-full text-sm font-semibold text-center hover:scale-105 transition-transform"
+              className="bg-amber-500 text-foreground px-6 py-2 rounded-full text-sm font-semibold text-center hover:scale-105 transition-transform"
             >
               Get Started
             </Link>
           </div>
 
           {/* Premium */}
-          <div className="rounded-2xl overflow-hidden bg-gradient-to-b from-[hsl(330,80%,50%)] to-[hsl(271,81%,56%)] text-primary-foreground p-6 flex flex-col">
-            <span className="text-xs bg-primary-foreground/20 px-3 py-1 rounded-full self-start mb-4">
-              SPECIAL OFFER
-            </span>
+               <div className="relative rounded-2xl overflow-hidden bg-gradient-to-b from-primary to-primary/80 text-primary-foreground p-6 flex flex-col transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl">
+
+        <div className="absolute top-4 right-4 bg-red-500 text-black text-xs font-semibold px-3 py-1 rounded-full shadow-md animate-pulse">
+          SPECIAL OFFER
+          </div>
             <h3 className="text-xl font-bold mb-1">PREMIUM</h3>
             <p className="text-sm opacity-80 mb-4">
-              Fully Functional Premium Website
+            ( Fully Functional Premium Website )
             </p>
-            <ul className="space-y-2 text-xs opacity-90 flex-1 mb-6">
-              <li>• Starter Offer: 1 Year Free Domain & Hosting</li>
-              <li>• All Admin Products / Services</li>
-              <li>• Unlimited Products / Services</li>
-              <li>• Advanced SEO & Performance Optimization</li>
-              <li>• Payment Gateway + Wallet System</li>
-              <li>• Multi Language + Multi Currency</li>
-              <li>• Live Chat + WhatsApp Business API</li>
-            </ul>
+          <ul className="space-y-3 text-xs flex-1 mb-6">
+  <li className="flex items-start gap-3">
+    <div className="bg-green-500/20 p-1.5 rounded-full shadow-sm">
+      <Check
+        size={14}
+        className="text-green-400 drop-shadow-[0_0_6px_rgba(34,197,94,0.8)]"
+      />
+    </div>
+    <span>Starter Offer: 1 Year Free Domain & Hosting</span>
+  </li>
+
+  <li className="flex items-start gap-3">
+    <div className="bg-green-500/20 p-1.5 rounded-full shadow-sm">
+      <Check
+        size={14}
+        className="text-green-400 drop-shadow-[0_0_6px_rgba(34,197,94,0.8)]"
+      />
+    </div>
+    <span>All Admin Products / Services</span>
+  </li>
+
+  <li className="flex items-start gap-3">
+    <div className="bg-green-500/20 p-1.5 rounded-full shadow-sm">
+      <Check
+        size={14}
+        className="text-green-400 drop-shadow-[0_0_6px_rgba(34,197,94,0.8)]"
+      />
+    </div>
+    <span>Unlimited Products / Services</span>
+  </li>
+
+  <li className="flex items-start gap-3">
+    <div className="bg-green-500/20 p-1.5 rounded-full shadow-sm">
+      <Check
+        size={14}
+        className="text-green-400 drop-shadow-[0_0_6px_rgba(34,197,94,0.8)]"
+      />
+    </div>
+    <span>Advanced SEO & Performance Optimization</span>
+  </li>
+
+  <li className="flex items-start gap-3">
+    <div className="bg-green-500/20 p-1.5 rounded-full shadow-sm">
+      <Check
+        size={14}
+        className="text-green-400 drop-shadow-[0_0_6px_rgba(34,197,94,0.8)]"
+      />
+    </div>
+    <span>Payment Gateway + Wallet System</span>
+  </li>
+
+  <li className="flex items-start gap-3">
+    <div className="bg-green-500/20 p-1.5 rounded-full shadow-sm">
+      <Check
+        size={14}
+        className="text-green-400 drop-shadow-[0_0_6px_rgba(34,197,94,0.8)]"
+      />
+    </div>
+    <span>Multi Language + Multi Currency</span>
+  </li>
+
+  <li className="flex items-start gap-3">
+    <div className="bg-green-500/20 p-1.5 rounded-full shadow-sm">
+      <Check
+        size={14}
+        className="text-green-400 drop-shadow-[0_0_6px_rgba(34,197,94,0.8)]"
+      />
+    </div>
+    <span>Live Chat + WhatsApp Business API</span>
+  </li>
+</ul>
+
             <div className="mb-4">
               <span className="text-sm line-through opacity-60">₹60,000</span>
               <p className="text-3xl font-extrabold">₹24,999</p>
             </div>
             <Link
               to="/contact"
-              className="bg-primary-foreground text-foreground px-6 py-2 rounded-full text-sm font-semibold text-center hover:scale-105 transition-transform"
+              className="bg-amber-500 text-foreground px-6 py-2 rounded-full text-sm font-semibold text-center hover:scale-105 transition-transform"
             >
               Get Started
             </Link>
@@ -322,140 +536,202 @@ const Services = () => (
       </div>
     </section>
 
-    {/* Social Media Management Pricing */}
-    <section className="py-10">
-      <div className="section-container">
-        <h2 className="text-3xl font-extrabold text-center text-foreground mb-12">
-          Choose Your Social Media Growth Strategy
-        </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {/* 1 Month */}
-          <div className="rounded-2xl overflow-hidden bg-gradient-to-b from-primary to-primary/80 text-primary-foreground p-6 flex flex-col">
-            <span className="text-xs bg-primary-foreground/20 px-3 py-1 rounded-full self-start mb-4">
-              STARTER
-            </span>
-            <h3 className="text-xl font-bold mb-1">1 Month</h3>
-            <p className="text-sm opacity-80 mb-4">
-              Best For: Startups & Trial
-            </p>
+{/* Social Media Management Pricing */}
+ <section className="py-14">
+   <div className="section-container">
+    <h2 className="text-3xl font-extrabold text-center text-foreground mb-14">
+      Choose Your Social Media Growth Strategy
+    </h2>
 
-            <ul className="space-y-2 text-xs opacity-90 flex-1 mb-6">
-              <li>• 4 Posts Per Week (16 Posts)</li>
-              <li>• Graphics + Reels Content</li>
-              <li>• Basic Profile Optimization</li>
-              <li>• Hashtag Strategy</li>
-              <li>• Weekly Report</li>
-              <li>• 3 Platforms Management</li>
-            </ul>
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
 
-            <div className="mb-4">
-              <span className="text-sm line-through opacity-60">₹7,999</span>
-              <p className="text-3xl font-extrabold">₹4,999</p>
-            </div>
+      {/* STARTER */}
+     <div className="relative rounded-2xl overflow-hidden 
+      bg-gradient-to-b from-primary to-primary/80 
+      text-primary-foreground p-6 flex flex-col
+      scale-105 border-2 border-yellow-400
+      transition-all duration-500 hover:-translate-y-5 hover:shadow-[0_0_25px_rgba(250,204,21,0.4)]">
 
-            <Link
-              to="/contact"
-              className="bg-primary-foreground text-foreground px-6 py-2 rounded-full text-sm font-semibold text-center hover:scale-105 transition-transform"
-            >
-              Get Started
-            </Link>
-          </div>
+        <span className="absolute top-4 right-4 text-xs bg-yellow-400 text-black px-3 py-1 rounded-full font-semibold animate-pulse">
+          STARTER
+        </span>
 
-          {/* 4 Months */}
-          <div className="rounded-2xl overflow-hidden bg-gradient-to-b from-primary to-primary/80 text-primary-foreground p-6 flex flex-col">
-            <span className="text-xs bg-primary-foreground/20 px-3 py-1 rounded-full self-start mb-4">
-              GROWTH
-            </span>
-            <h3 className="text-xl font-bold mb-1">4 Months</h3>
-            <p className="text-sm opacity-80 mb-4">Consistent Growth Plan</p>
+        <h3 className="text-xl font-bold mt-6 mb-1">1 Month</h3>
+        <p className="text-sm opacity-80 mb-4">
+          Best For: Startups & Trial
+        </p>
 
-            <ul className="space-y-2 text-xs opacity-90 flex-1 mb-6">
-              <li>• 4 Posts Per Week (64 Posts)</li>
-              <li>• Reels Strategy</li>
-              <li>• Full Profile Setup</li>
-              <li>• Advanced Hashtag Research</li>
-              <li>• Weekly Analytics</li>
-              <li>• Engagement Strategy</li>
-              <li>• Competitor Analysis</li>
-            </ul>
+        <ul className="space-y-3 text-xs flex-1 mb-6">
+          {[
+            "4 Posts Per Week (16 Posts)",
+            "Graphics + Reels Content",
+            "Basic Profile Optimization",
+            "Hashtag Strategy",
+            "Weekly Report",
+            "3 Platforms Management",
+          ].map((item) => (
+            <li key={item} className="flex items-start gap-3">
+              <div className="bg-green-500/20 p-1.5 rounded-full shadow-sm">
+                <Check size={14} className="text-green-400 drop-shadow-[0_0_6px_rgba(34,197,94,0.8)]" />
+              </div>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
 
-            <div className="mb-4">
-              <span className="text-sm line-through opacity-60">₹24,999</span>
-              <p className="text-3xl font-extrabold">₹14,999</p>
-            </div>
-
-            <Link
-              to="/contact"
-              className="bg-primary-foreground text-foreground px-6 py-2 rounded-full text-sm font-semibold text-center hover:scale-105 transition-transform"
-            >
-              Get Started
-            </Link>
-          </div>
-
-          {/* 8 Months */}
-          <div className="rounded-2xl overflow-hidden bg-gradient-to-b from-[hsl(271,81%,56%)] to-[hsl(271,81%,40%)] text-primary-foreground p-6 flex flex-col">
-            <span className="text-xs bg-primary-foreground/20 px-3 py-1 rounded-full self-start mb-4">
-              PROFESSIONAL
-            </span>
-            <h3 className="text-xl font-bold mb-1">8 Months</h3>
-            <p className="text-sm opacity-80 mb-4">Brand Building Plan</p>
-
-            <ul className="space-y-2 text-xs opacity-90 flex-1 mb-6">
-              <li>• 4 Posts Per Week (128 Posts)</li>
-              <li>• Premium Reels Strategy</li>
-              <li>• Advanced Optimization</li>
-              <li>• Audience Targeting</li>
-              <li>• Weekly + Monthly Reports</li>
-              <li>• Brand Positioning Support</li>
-            </ul>
-
-            <div className="mb-4">
-              <span className="text-sm line-through opacity-60">₹48,999</span>
-              <p className="text-3xl font-extrabold">₹29,999</p>
-            </div>
-
-            <Link
-              to="/contact"
-              className="bg-primary-foreground text-foreground px-6 py-2 rounded-full text-sm font-semibold text-center hover:scale-105 transition-transform"
-            >
-              Get Started
-            </Link>
-          </div>
-
-          {/* 12 Months */}
-          <div className="rounded-2xl overflow-hidden bg-gradient-to-b from-[hsl(330,80%,50%)] to-[hsl(271,81%,56%)] text-primary-foreground p-6 flex flex-col">
-            <span className="text-xs bg-primary-foreground/20 px-3 py-1 rounded-full self-start mb-4">
-              ELITE
-            </span>
-            <h3 className="text-xl font-bold mb-1">12 Months</h3>
-            <p className="text-sm opacity-80 mb-4">Authority & Domination</p>
-
-            <ul className="space-y-2 text-xs opacity-90 flex-1 mb-6">
-              <li>• 4 Posts Per Week (192 Posts)</li>
-              <li>• Complete Content Strategy</li>
-              <li>• Full Profile Optimization</li>
-              <li>• Paid Ads Guidance</li>
-              <li>• Advanced Analytics</li>
-              <li>• Market + Competitor Analysis</li>
-              <li>• Monthly Strategy Calls</li>
-            </ul>
-
-            <div className="mb-4">
-              <span className="text-sm line-through opacity-60">₹59,999</span>
-              <p className="text-3xl font-extrabold">₹34,999</p>
-            </div>
-
-            <Link
-              to="/contact"
-              className="bg-primary-foreground text-foreground px-6 py-2 rounded-full text-sm font-semibold text-center hover:scale-105 transition-transform"
-            >
-              Get Started
-            </Link>
-          </div>
+        <div className="mb-4">
+          <span className="text-sm line-through opacity-60">₹7,999</span>
+          <p className="text-3xl font-extrabold">₹4,999</p>
         </div>
+
+        <Link to="/contact"
+          className="bg-green-500 text-foreground px-6 py-2 rounded-full text-sm font-semibold text-center hover:scale-105 transition">
+          Get Started
+        </Link>
       </div>
-    </section>
+
+      {/* GROWTH - MOST POPULAR */}
+      <div className="relative rounded-2xl overflow-hidden 
+      bg-gradient-to-b from-primary to-primary/80 
+      text-primary-foreground p-6 flex flex-col
+      scale-105 border-2 border-yellow-400
+      transition-all duration-500 hover:-translate-y-5 hover:shadow-[0_0_25px_rgba(250,204,21,0.4)]">
+
+        <span className="absolute top-4 right-4 text-xs bg-yellow-400 text-black px-3 py-1 rounded-full font-semibold animate-pulse">
+          MOST POPULAR
+        </span>
+
+        <h3 className="text-xl font-bold mt-6 mb-1">4 Months</h3>
+        <p className="text-sm opacity-80 mb-4">Consistent Growth Plan</p>
+
+        <ul className="space-y-3 text-xs flex-1 mb-6">
+          {[
+            "4 Posts Per Week (64 Posts)",
+            "Reels Strategy",
+            "Full Profile Setup",
+            "Advanced Hashtag Research",
+            "Weekly Analytics",
+            "Engagement Strategy",
+            "Competitor Analysis",
+          ].map((item) => (
+            <li key={item} className="flex items-start gap-3">
+              <div className="bg-green-500/20 p-1.5 rounded-full shadow-sm">
+                <Check size={14} className="text-green-400 drop-shadow-[0_0_6px_rgba(34,197,94,0.8)]" />
+              </div>
+              <span className="font-medium">{item}</span>
+            </li>
+          ))}
+        </ul>
+
+        <div className="mb-4">
+          <span className="text-sm line-through opacity-60">₹24,999</span>
+          <p className="text-3xl font-extrabold text-yellow-300">₹14,999</p>
+        </div>
+
+        <Link to="/contact"
+          className="bg-green-500 text-black px-6 py-2 rounded-full text-sm font-bold text-center hover:scale-105 transition">
+          Get Started
+        </Link>
+      </div>
+
+      {/* PROFESSIONAL */}
+      <div className="relative rounded-2xl overflow-hidden 
+      bg-gradient-to-b from-primary to-primary/80 
+      text-primary-foreground p-6 flex flex-col
+      scale-105 border-2 border-yellow-400
+      transition-all duration-500 hover:-translate-y-5 hover:shadow-[0_0_25px_rgba(250,204,21,0.4)]">
+
+        <span className="absolute top-4 right-4 text-xs bg-yellow-400 text-black px-3 py-1 rounded-full font-semibold animate-pulse">
+          PROFESSIONAL
+        </span>
+
+        <h3 className="text-xl font-bold mt-6 mb-1">8 Months</h3>
+        <p className="text-sm opacity-80 mb-4">Brand Building Plan</p>
+
+        <ul className="space-y-3 text-xs flex-1 mb-6">
+          {[
+            "4 Posts Per Week (128 Posts)",
+            "Premium Reels Strategy",
+            "Advanced Optimization",
+            "Audience Targeting",
+            "Weekly + Monthly Reports",
+            "Brand Positioning Support",
+          ].map((item) => (
+            <li key={item} className="flex items-start gap-3">
+              <div className="bg-purple-500/20 p-1.5 rounded-full shadow-sm">
+                <Check size={14} className="text-purple-300 drop-shadow-[0_0_6px_rgba(168,85,247,0.9)]" />
+              </div>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+
+        <div className="mb-4">
+          <span className="text-sm line-through opacity-60">₹48,999</span>
+          <p className="text-3xl font-extrabold">₹29,999</p>
+        </div>
+
+        <Link to="/contact"
+          className="bg-green-500 text-foreground px-6 py-2 rounded-full text-sm font-semibold text-center hover:scale-105 transition">
+          Get Started
+        </Link>
+      </div>
+
+      {/* ELITE */}
+      <div className="relative rounded-2xl overflow-hidden 
+      bg-gradient-to-b from-primary to-primary/80 
+      text-primary-foreground p-6 flex flex-col
+      scale-105 border-2 border-yellow-400
+      transition-all duration-500 hover:-translate-y-5 hover:shadow-[0_0_25px_rgba(250,204,21,0.4)]">
+
+        <span className="absolute top-4 right-4 text-xs bg-yellow-400 text-black px-3 py-1 rounded-full font-semibold animate-pulse">
+          ELITE
+        </span>
+
+        <h3 className="text-xl font-bold mt-6 mb-1 flex items-center gap-2">
+          <Crown size={18} className="text-yellow-400" />
+          12 Months
+        </h3>
+
+        <p className="text-sm opacity-90 mb-4">Authority & Domination</p>
+
+        <ul className="space-y-3 text-xs flex-1 mb-6">
+          {[
+            "4 Posts Per Week (192 Posts)",
+            "Complete Content Strategy",
+            "Full Profile Optimization",
+            "Paid Ads Guidance",
+            "Advanced Analytics",
+            "Market + Competitor Analysis",
+            "Monthly Strategy Calls",
+          ].map((item) => (
+            <li key={item} className="flex items-start gap-3">
+              <div className="bg-yellow-400/20 p-1.5 rounded-full shadow-sm">
+                <Check size={14} className="text-yellow-300 drop-shadow-[0_0_6px_rgba(250,204,21,0.9)]" />
+              </div>
+              <span className="font-medium">{item}</span>
+            </li>
+          ))}
+        </ul>
+
+        <div className="mb-4">
+          <span className="text-sm line-through opacity-60">₹59,999</span>
+          <p className="text-3xl font-extrabold text-yellow-300">₹34,999</p>
+        </div>
+
+        <Link to="/contact"
+          className="bg-green-500 text-black px-6 py-2 rounded-full text-sm font-bold text-center hover:scale-105 transition">
+          Get Started
+        </Link>
+      </div>
+
+    </div>
+  </div>
+</section> 
+
+
+
 
     {/* CTA */}
     <section className="py-16">

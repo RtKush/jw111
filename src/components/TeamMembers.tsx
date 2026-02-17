@@ -1,5 +1,9 @@
 import { useState } from "react";
-import { Instagram, Linkedin, MessageCircle } from "lucide-react";
+import kush from "../assets/passport.jpg";
+import ashvini from "../assets/ashvini.png";
+import aniket from "../assets/aniket.jpeg";
+
+import { Linkedin, MessageCircle } from "lucide-react";
 
 interface Member {
   name: string;
@@ -7,11 +11,9 @@ interface Member {
   subtitle: string;
   image: string;
   about: string;
-  instagram?: string;
+
   linkedin?: string;
-  facebook?: string;
-  youtube?: string;
-  whatsapp?: string;
+
 }
 
 const teamMembers: Member[] = [
@@ -19,21 +21,31 @@ const teamMembers: Member[] = [
     name: "Rt Kush",
     title: "Team Lead",
     subtitle: "Full-Stack Developer & Software Engineer, NIT Raipur",
-    image: "/src/assets/passport.jpg",
+    image: kush,
     about:
       "Leading modern web development with scalable architecture, performance optimization, and AI-driven solutions.",
-    instagram: "#",
-    linkedin: "#",
+  
+    linkedin: "https://www.linkedin.com/in/kush-kumar-505477202/?skipRedirect=true",
   },
   {
     name: "Ashvini",
     title: "Frontend Dev",
     subtitle: "UI/UX Designer & Frontend Specialist",
-    image: "/src/assets/ash.png",
+    image: ashvini,
     about:
       "Crafting high-performance, intuitive interfaces that seamlessly blend speed, design, and exceptional user experience.",
-    instagram: "#",
-    linkedin: "#",
+   
+    linkedin: "https://in.linkedin.com/in/ashvini-kushwaha",
+  },
+   {
+    name: "Aniket",
+    title: "Digital Marketing",
+    subtitle: "Managing Digital Marketing",
+    image: aniket,
+    about:
+      "Crafting high-performance, intuitive interfaces that seamlessly blend speed, design, and exceptional user experience.",
+
+    linkedin: "https://in.linkedin.com/in/aniket-kumar-38a6092b5",
   },
 ];
 
@@ -50,7 +62,7 @@ export default function TeamMembers() {
             <div
               key={index}
               onClick={() => setSelected(member)}
-              className="min-w-[260px] h-24 flex items-center gap-4 px-5
+              className="min-w-[350px] h-40 flex items-center gap-6 px-8
               rounded-2xl bg-white shadow-md cursor-pointer
               transition-all duration-300
               hover:shadow-xl hover:-translate-y-1 hover:border hover:border-primary/30"
@@ -58,11 +70,11 @@ export default function TeamMembers() {
               <img
                 src={member.image}
                 alt={member.name}
-                className="w-16 h-16 rounded-full object-cover ring-2 ring-primary/20"
+                className="w-24 h-24 rounded-full object-cover ring-4 ring-primary/20"
               />
               <div className="text-left">
-                <h3 className="text-lg font-semibold">{member.name}</h3>
-                <p className="text-sm text-gray-500">{member.title}</p>
+                <h3 className="text-xl font-bold">{member.name}</h3>
+                <p className="text-base text-gray-800">{member.title}</p>
               </div>
             </div>
           ))}
@@ -97,17 +109,7 @@ export default function TeamMembers() {
 
               {/* Social Icons */}
               <div className="flex justify-center gap-4">
-                {selected.instagram && (
-                  <a
-                    href={selected.instagram}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="p-3 rounded-full bg-pink-100 hover:bg-pink-200 transition"
-                  >
-                    <Instagram className="w-5 h-5 text-pink-600" />
-                  </a>
-                )}
-
+                
                 {selected.linkedin && (
                   <a
                     href={selected.linkedin}
@@ -119,16 +121,7 @@ export default function TeamMembers() {
                   </a>
                 )}
 
-                {selected.whatsapp && (
-                  <a
-                    href={selected.whatsapp}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="p-3 rounded-full bg-green-100 hover:bg-green-200 transition"
-                  >
-                    <MessageCircle className="w-5 h-5 text-green-600" />
-                  </a>
-                )}
+                
               </div>
             </div>
           </div>

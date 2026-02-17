@@ -16,7 +16,7 @@ const FeatureCard = ({ icon: Icon, title, description }: FeatureCardProps) => (
     <h3 className="text-lg font-bold text-foreground mb-2">{title}</h3>
     <p className="text-sm text-muted-foreground leading-relaxed mb-4">{description}</p>
     <span className="text-sm font-semibold text-primary group-hover:underline cursor-pointer">
-      Discover now →
+      By:- JeetWeb
     </span>
   </div>
 );

@@ -41,15 +41,13 @@ const About = () => (
               optimized websites that help businesses scale faster and build a
               powerful online presence.
             </p>
-            <p className="text-muted-foreground leading-relaxed mb-6">
-              <span className="font-bold text-foreground">His</span> visionary
-              entrepreneur and Founder of Jeetweb, dedicated to building smart
-              digital and AI-driven solutions for businesses.
+            <p className="text-muted-foreground leading-relaxed mb-6">🌍 Vision – Jeetweb
+To become a trusted digital growth partner for emerging businesses by setting new standards in performance, reliability, and online excellence.
+
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              Together, we help businesses launch high-converting websites,
-              automate workflows, and deploy smart AI tools that save time and
-              multiply revenue.
+              🎯 Mission – Jeetweb
+To design and deliver strategic, secure, and conversion-focused digital solutions that help businesses establish authority, attract customers, and scale sustainably in the competitive online marketplace.
             </p>
           </div>
         </div>
